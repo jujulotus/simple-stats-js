@@ -7,9 +7,18 @@ const defaultOptions: OptionsT = {
 };
 
 /**
- * Returns the sum of an array of numbers.
- * If array is empty, null is returned instead.
- * @param numbers - array of numbers
+ * Returns the sum value of an array of numbers.
+ * If the array is empty, null is returned instead.
+ *
+ * @param {Array<number>} numbers - Array of numbers
+ * @param {Object} options - Function configuration options.
+ * @param {number} options.fixedTo - Number of decimal places in the returned value if sum returns a float.
+ * @returns {number | null} - The sum of an array of numbers, of null if the array is empty.
+ *
+ * @example
+ * ```typescript
+ * sum([10, 12, 32]) // returns 54
+ * ```
  */
 export default function sum(
 	numbers: number[],

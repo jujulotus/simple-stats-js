@@ -1,8 +1,10 @@
 // import avg from "./avg.ts";
-// import sum from "./sum.ts";
+import sum from "./sum.ts";
 
-import median from "./median.ts";
+const res = sum([10]);
+// import median from "./median.ts";
 
-const res = median([12, 9, 22, 35, 25, 53, 100, 152]);
+// const res2 = median([12.45, 9.23, 22.44]);
+// const res = median([-12.45, -9.2345, -22.44]);
 
 console.log(res, "final response");

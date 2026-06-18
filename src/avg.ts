@@ -7,16 +7,17 @@ const defaultOptions: OptionsT = {
 };
 
 /**
- * Calculates the average value of an array of numbers.
- * If array is empty, null is returned instead.
- * @param numbers[] array of numbers
- * @param {Object} options
- * @param {number} options.fixedTo - Amount of decimal numbers to be returned.
- * @returns number | null
+ * Returns the average value of an array of numbers.
+ * If the array is empty, null is returned instead.
+ *
+ * @param {Array<number>} numbers - Array of numbers
+ * @param {Object} options - Function configuration options.
+ * @param {number} options.fixedTo - Number of decimal numbers in the returned value.
+ * @returns {number | null} - The average value of an array of numbers, or null if the array is empty.
  *
  * @example
  * ```typescript
- * const res = avg([20, 12, 10, 5], { fixedTo: 2 }); // Returns 11.75
+ * avg([20, 12, 10, 5], { fixedTo: 2 }); // Returns 11.75
  * ```
  */
 export default function avg(
