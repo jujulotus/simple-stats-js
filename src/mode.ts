@@ -11,7 +11,7 @@ export default function mode(numbers: number[]): number | number[] | null {
 		return null;
 	}
 
-	if (numbers.length === 0) {
+	if (numbers.length === 1) {
 		return numbers[0] ?? null;
 	}
 
