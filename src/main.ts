@@ -1,10 +1,12 @@
 // import avg from "./avg.ts";
-import sum from "./sum.ts";
+// import sum from "./sum.ts";
+import mode from "./mode.ts";
 
-const res = sum([10]);
-// import median from "./median.ts";
-
-// const res2 = median([12.45, 9.23, 22.44]);
-// const res = median([-12.45, -9.2345, -22.44]);
+const res = mode([
+	10, 12, 12, 1, 1, 5, 5, 5, 6, 57, 57, 57, 57, 57, 57, 150, 123, 100, 123, 123,
+	123, 123, 123, 123, 123, 51, 32, 45, 120, 120, 120, 100, 21, 12, 45, 70, 12,
+	23, 123, 123, 130, 230, 5340, 1230, 41023, 12304, 1234, 51009, 4951, 150000,
+	123456789,
+]);
 
 console.log(res, "final response");
