@@ -5,7 +5,6 @@
  * @param {Array<number>} numbers - Array of numbers.
  * @returns {number | Array<number> | null}
  */
-
 export default function mode(numbers: number[]): number | number[] | null {
 	if (numbers.length === 0) {
 		return null;
@@ -18,7 +17,7 @@ export default function mode(numbers: number[]): number | number[] | null {
 	let max: number = 0,
 		num: number = 0;
 
-	numbers.reduce((acc: { [key: number]: number }, cv: number) => {
+	const keys = numbers.reduce((acc: { [key: number]: number }, cv: number) => {
 		acc[cv] = (acc[cv] || 0) + 1;
 
 		if (acc[cv] > max) {
@@ -27,6 +26,15 @@ export default function mode(numbers: number[]): number | number[] | null {
 		}
 		return acc;
 	}, {});
+
+	const res: number[] = [];
+
+	for (const [key, val] of Object.entries(keys))
+		if (val === max) res.push(Number(key));
+
+	if (res.length > 1) {
+		return res;
+	}
 
 	return num;
 }
